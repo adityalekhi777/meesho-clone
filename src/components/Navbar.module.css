@@ -1,0 +1,94 @@
+:root{
+  --primary-color:rgb(247, 119, 224);
+}
+
+nav {
+  border-bottom: solid rgb(195, 195, 195) 2px;
+}
+
+nav ul {
+  width: 95vw;
+  padding: 15px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav ul li.logo {
+  color:var(--primary-color) ;
+  font-weight: 700;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+nav ul li input {
+  margin-left: 10px;
+  width: 40%;
+  height: 40px;
+  padding: 10px;
+}
+
+.link {
+  padding: 8px 0;
+  border-bottom: solid rgb(195, 195, 195) 2px;
+  position: relative;
+}
+
+.sub {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.sub span {
+  cursor: pointer;
+  display: block;
+}
+
+.sub span:hover{
+  border-bottom: 2px solid var(--primary-color);
+}
+
+
+
+.options{
+    width:90vw;
+    border: solid 1px rgb(195, 195, 195);
+    position: absolute;
+    left: 8%;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.options span{
+  display: block;
+  padding: 0 10px;
+  
+}
+
+
+.options-title{
+  color: var(--primary-color) ;
+}
+
+.options div:nth-of-type(2n) {
+  background: rgba(229, 228, 229, 0.768);
+}
+
+.options-title span a:link,
+.options-title span a:visited{
+  text-decoration: none;
+ 
+  color: black;
+}
+
+.options-title span a:link:hover{
+  text-decoration: underline;
+}

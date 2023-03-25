@@ -1,0 +1,36 @@
+.container{
+    margin: auto;
+    margin-top: 20vh;
+    width: 200px;
+    justify-content: center;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container input{
+    margin: 15px 0;
+    height: 30px;
+    padding: 5px;
+}
+ .container button{
+    width: 50%;
+    height: 30px;
+    align-self: center;
+    padding: 5px;
+    color: white;
+    background-color: rgb(247, 119, 224);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.container p{
+    font-size: 0.8em;
+    text-align: center;
+  } 

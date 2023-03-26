@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import List from './pages/List.jsx'
 import Category from './pages/Category.jsx'
+import PrivateCartRoute from './pages/PrivateCartRoute'
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -15,7 +16,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<Headerlayout/>}>
       <Route index element={<List/>}/>
       <Route path='category/:name' element={<Category/>}/> 
-      <Route path='cart' element={<Cart/>}/>
+      <Route path='cart' element={<PrivateCartRoute/>}/>
+
+ 
       <Route path='login' element={<Login/>}/>
       <Route path='signup' element={<Signup/>}/>
     </Route>

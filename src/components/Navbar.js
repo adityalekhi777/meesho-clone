@@ -198,7 +198,7 @@ export default function Navbar() {
               </div>
             )}
           </li>
-          <li>Cart</li>
+          <li><Link to='/cart'>Cart</Link></li>
         </ul>
       </nav>
       <div className={styles.link}>

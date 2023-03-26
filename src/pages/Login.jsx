@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import styles from './Signup.module.css';
 import { Link, useNavigate } from "react-router-dom";
 
+import  GoogleAuth  from "../components/Googleauth";
+
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,6 +56,10 @@ export default function Signup() {
         />
         <button type="submit">Login</button>
         <p>not a member?  <Link to='/signup'>signup here</Link></p>
+        <div className={styles.google}>
+        <p>or</p>
+        <GoogleAuth/>
+        </div>
       </form>
      
     </div>

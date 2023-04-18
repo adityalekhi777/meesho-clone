@@ -2,6 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: null,
+  page: 0,
+  cartArr:[],
+  cartCount:0
 };
 
 const productSlice = createSlice({
@@ -9,8 +12,12 @@ const productSlice = createSlice({
   initialState: initialState,
   reducers: {
     get_data(state, action) {
-      state.data = action.payload;
+      state.data = action.payload.data;
+      state.page = action.payload.page;
     },
+    add_to_cart(state,action){
+      state.cartCount = state.cartCount +1
+    }
   },
 });
 
@@ -31,7 +38,7 @@ export const fetchData = (page) => {
 
     try{
         const data = await goFetch(page);
-        dispatch(productSlice.actions.get_data(data));
+        dispatch(productSlice.actions.get_data({data,page}));
     }catch(err){
         console.log(err);
     }

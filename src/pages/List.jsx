@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux'
 import{fetchData} from '../redux/products/productReducer'
 import styles from "./List.module.css"
 import Filter from '../components/Filter'
+import { useNavigate } from 'react-router-dom'
 
 
  function List() {
@@ -12,7 +13,8 @@ import Filter from '../components/Filter'
   const dispatch = useDispatch();
   const data = useSelector(state => state.products.data);
   const [usedData,setUsedData] = useState("");
-  console.log(data);
+  
+  const navigate = useNavigate();
 
   function filterData(data){
     setUsedData(data);
@@ -42,7 +44,7 @@ import Filter from '../components/Filter'
     <div className={styles["product_grid_container"]}>
       {usedData && usedData.map(item => {
         return(
-          <div key={item.id} className={styles["product_grid_item"]}>
+          <div key={item.id} className={styles["product_grid_item"]} onClick={() => navigate(`/product/${item.id}`)}>
             <img src={item.image} alt=""/>
             <div className={styles.title}>{item.title}</div>
             <div className={styles.price}><span>₹{item.price}</span> onwards</div>

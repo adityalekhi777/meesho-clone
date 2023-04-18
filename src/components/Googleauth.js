@@ -10,8 +10,6 @@ import { useDispatch } from "react-redux";
 
 export default function OAuth() {
   const navigate = useNavigate();
-  const location = useLocation();
-
   const dispatch = useDispatch();
 
   async function onGoogleClick() {
@@ -21,10 +19,11 @@ export default function OAuth() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      
 
+      //This is to check is user already exists in database
       const docRef = doc(db, "users", user.uid);
       const docSnap = await getDoc(docRef);
+      console.log(user);
 
       if (!docSnap.exists()) {
         await setDoc(doc(db, "users", user.uid), {
@@ -32,10 +31,11 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
 
-        dispatch(authActions.login({email:user.email,id:user.uid}));
+        
+      }
+      dispatch(authActions.login({email:user.email,id:user.uid}));
 
         navigate("/");
-      }
     } catch (error) {
       console.log(error);
     }

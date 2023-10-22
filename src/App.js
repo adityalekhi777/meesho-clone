@@ -1,5 +1,7 @@
 import {
   createBrowserRouter,
+  BrowserRouter,
+  Routes,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -17,23 +19,30 @@ import Product from "./pages/Product";
 
 import { Provider } from "react-redux";
 import store from "./redux/store";
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Headerlayout />}>
+import Navbar from "./components/Navbar";
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<Headerlayout />}>
+      
+//     </Route>
+//   )
+// );
+
+function App() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
       <Route index element={<List />} />
       <Route path="category/:name" element={<Category />} />
       <Route path="product/:id" element={<Product />} />
       <Route path="cart" element={<PrivateCartRoute />} />
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
-    </Route>
-  )
-);
-
-function App() {
-  return (
-    <Provider store={store}>
-      <RouterProvider router={router} />
+      </Routes>
+      </BrowserRouter>
+      {/* <RouterProvider router={router} /> */}
     </Provider>
   );
 }

@@ -7,6 +7,8 @@ nav {
   position: relative;
 }
 
+
+
 nav ul {
   width: 95vw;
   padding: 15px;
@@ -17,6 +19,10 @@ nav ul {
   align-items: center;
   list-style-type: none;
   gap: 20px;
+}
+
+nav ul li{
+  cursor: pointer;
 }
 
 nav ul li.logo {
@@ -40,6 +46,8 @@ nav ul li input {
 }
 
 
+
+
 .profile{
   position: absolute;
   background-color: white;
@@ -60,16 +68,21 @@ nav ul li input {
   font-weight: 400;
 }
 
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile button{
   background-color:var(--primary-color) ;
   border: none;
   font-size: 1.2em;
   color: white;
-  width: 80%;
-  padding: 5px 0;
-  text-align: center;
+  padding: 5px 10px;
   cursor: pointer;
-  margin: auto auto;
+
 }
 
 .sub {

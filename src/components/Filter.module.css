@@ -13,3 +13,42 @@
     gap: 5px;
     
 }
+
+label{
+    border: solid 1px black;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.clear{
+    background: transparent;
+    border: none;
+    margin-left: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(247, 119, 224);
+}
+
+input[type='radio']{
+   display: none;
+   width: 100px;
+}
+
+.options button{
+    background-color: transparent;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.options .selected_price{
+    background-color: rgba(247, 119, 224, 0.308);
+    
+}

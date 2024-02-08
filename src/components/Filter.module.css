@@ -1,9 +1,9 @@
 
-
 .filter_container{
     border: 1px solid rgb(153, 153, 153);
     min-height: 100vh;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .options{
@@ -41,11 +41,19 @@ input[type='radio']{
 
 .options button{
     background-color: transparent;
+    border: 1px solid hsla(0, 0%, 60%, 0.566);
     margin: 5px;
     padding: 5px;
     cursor: pointer;
-    border: 1px solid black;
     border-radius: 20px;
+    transition: all linear .1s;
+}
+
+.options button:hover{
+    background-color:rgb(247, 119, 224);
+    border: none;
+    color: white;
+    
 }
 
 .options .selected_price{

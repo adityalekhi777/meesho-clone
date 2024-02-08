@@ -1,13 +1,12 @@
-:root{
-  --primary-color:rgb(247, 119, 224);
+:root {
+  --primary-color: rgb(247, 119, 224);
 }
 
 nav {
   border-bottom: solid rgb(195, 195, 195) 2px;
   position: relative;
+  font-weight: 500;
 }
-
-
 
 nav ul {
   width: 95vw;
@@ -21,12 +20,12 @@ nav ul {
   gap: 20px;
 }
 
-nav ul li{
+nav ul li {
   cursor: pointer;
 }
 
 nav ul li.logo {
-  color:var(--primary-color) ;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 20px;
   flex-grow: 1;
@@ -45,10 +44,7 @@ nav ul li input {
   position: relative;
 }
 
-
-
-
-.profile{
+.profile {
   position: absolute;
   background-color: white;
   z-index: 3;
@@ -63,34 +59,34 @@ nav ul li input {
   gap: 10px;
 }
 
-.profile span{
+.profile span {
   font-size: 0.7em;
   font-weight: 400;
 }
 
-.profile{
+.profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.profile button{
-  background-color:var(--primary-color) ;
+.profile button {
+  background-color: var(--primary-color);
   border: none;
   font-size: 1.2em;
   color: white;
   padding: 5px 10px;
   cursor: pointer;
-
 }
 
 .sub {
-  width: 80vw;
+  width: 85vw;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   gap: 10px;
+  font-weight: 500;
 }
 
 .sub span {
@@ -98,33 +94,33 @@ nav ul li input {
   display: block;
 }
 
-.sub span:hover{
+.sub span:hover {
   border-bottom: 2px solid var(--primary-color);
 }
 
-
-
-.options{
-    width:90vw;
-    border: solid 1px rgb(195, 195, 195);
-    position: absolute;
-    left: 8%;
-    padding: 0 10px;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    background-color: white;
-    z-index: 4;
+.options {
+  width: 85vw;
+  margin: 0 au;
+  border: solid 1px rgb(195, 195, 195);
+  position: absolute;
+  left: 7%;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 4;
 }
 
-.options span{
+.options span {
   display: block;
   padding: 0 10px;
-  
 }
 
-
-.options-title{
-  color: var(--primary-color) ;
+.options-title {
+  color: var(--primary-color);
+  font-weight: 500;
 }
 
 .options div:nth-of-type(2n) {
@@ -132,13 +128,11 @@ nav ul li input {
 }
 
 .options-title span a:link,
-.options-title span a:visited{
+.options-title span a:visited {
   text-decoration: none;
- 
   color: black;
 }
 
-.options-title span a:link:hover{
+.options-title span a:link:hover {
   text-decoration: underline;
 }
-

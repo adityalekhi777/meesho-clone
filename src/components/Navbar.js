@@ -6,8 +6,6 @@ import { fetchKeyWordData } from '../redux/products/productReducer';
 import cart from '../assets/svg/shopping_cart.svg';
 import subMenu from './MenuData';
 
-
-
 export default function Navbar() {
   const [hover, setHover] = useState(true);
   const [category, setCategory] = useState([]);
@@ -46,11 +44,9 @@ export default function Navbar() {
                 value={key}
                 onChange={(e) => setKey(e.target.value)}></input>
             </form>
-            
           </li>
-          <li onClick={()=> navigate('/')}>Home</li>
+          <li onClick={() => navigate('/')}>Home</li>
           {user && <li>Hello {user.email}</li>}
-          <li>Download App</li>
           {!user && (
             <li
               onMouseOver={() => {
@@ -71,6 +67,11 @@ export default function Navbar() {
             </li>
           )}
           <li>
+            <Link to='/cart' >
+              <div className={styles.cartTotal}>{totalQuantity}</div>
+            </Link>
+          </li>
+          <li>
             <Link
               to='/cart'
               style={{
@@ -79,20 +80,6 @@ export default function Navbar() {
                 justifyContent: 'space-between',
               }}>
               {' '}
-              <div
-                style={{
-                  backgroundColor: 'pink',
-                  textAlign:'center',
-                  display:'block',
-                  height: '30px',
-                  width: '30px',
-                  lineHeight:'30px',
-                  borderRadius: '20px',
-                  alignSelf:'center',
-                  justifySelf:'center'
-                }}>
-                {totalQuantity}
-              </div>
               <img src={cart} alt='cart' /> <span>Cart</span>
             </Link>
           </li>

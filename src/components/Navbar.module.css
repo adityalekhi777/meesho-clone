@@ -17,7 +17,7 @@ nav ul {
   justify-content: flex-end;
   align-items: center;
   list-style-type: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav ul li {
@@ -81,7 +81,7 @@ nav ul li input {
 }
 
 .sub {
-  width: 85vw;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -103,7 +103,7 @@ nav ul li input {
   margin: 0 au;
   border: solid 1px rgb(195, 195, 195);
   position: absolute;
-  left: 7%;
+  left: 4%;
   padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -111,6 +111,7 @@ nav ul li input {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 4;
+  transition: all 0.1s linear;
 }
 
 .options span {
@@ -135,4 +136,14 @@ nav ul li input {
 
 .options-title span a:link:hover {
   text-decoration: underline;
+}
+
+.cartTotal {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: white;
 }

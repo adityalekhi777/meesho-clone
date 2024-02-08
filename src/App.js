@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Headerlayout from './components/Headerlayout';
-import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import List from './pages/List.jsx';

@@ -23,7 +23,7 @@ const Slider = () => {
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
-      onSlideChange={() => console.log('slide change')}
+      // onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}>
       <SwiperSlide>
         <img src={image_1} alt='Slide' />

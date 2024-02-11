@@ -36,7 +36,9 @@ export default function Navbar() {
       <nav className={styles.nav} onMouseOver={() => setHover(false)}>
         <ul>
           <li className={styles.logo}>
+          <Link to='/' >
             Meesho
+            </Link>
             <form onSubmit={search} style={{ display: 'inline' }}>
               <input
                 type='text'

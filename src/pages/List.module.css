@@ -12,76 +12,28 @@
 
 .product_grid_container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row;
-  gap: 10px;
+  gap: 20px;
   width: 80vw;
   margin-right: 2vw;
 }
 
-.product_grid_item {
-  border: 1px solid hsla(0, 0%, 60%, 0.566);
-  border-radius: 20px;
+.pagination{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-self: center;
+  
+}
+
+.pagination button{
+  margin: 20px;
+  background-color: plum;
+  border: none;
+  font-weight: 800;
+  font-size: 15px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  justify-content: space-around;
-  overflow: hidden;
-  padding: 5px;
-  transition: all .1s linear;
-}
-
-.product_grid_item:hover{
-    transform: scale(1.06);
-}
-
-.product_grid_item .title {
-  color: rgb(153, 153, 153);
-  overflow: hidden;
-  font-size: 0.85em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.product_grid_item .price span {
-  font-weight: 700;
-}
-
-.product_grid_item img {
-  max-width: 80%;
-  min-height: 150px;
-  margin: 0 auto;
-
-  object-fit: contain;
-}
-
-.product_grid_item .green {
-  background-color: green;
-  border-radius: 20px;
-  color: #fff;
-  line-height: 25px;
-  padding: 0 5px;
-  text-align: center;
-  width: 50px;
-}
-
-.product_grid_item .red {
-  background-color: red;
-  border-radius: 20px;
-  color: #fff;
-  line-height: 25px;
-  padding: 0 5px;
-  text-align: center;
-  width: 50px;
-}
-
-.product_grid_item .orange {
-  background-color: orange;
-  border-radius: 20px;
-  color: #fff;
-  line-height: 25px;
-  padding: 0 5px;
-  text-align: center;
-  width: 50px;
 }

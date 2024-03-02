@@ -7,6 +7,7 @@ import Category from './pages/Category.jsx';
 import PrivateCartRoute from './pages/PrivateCartRoute';
 import Product from './pages/Product';
 
+
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Navbar from './components/Navbar';

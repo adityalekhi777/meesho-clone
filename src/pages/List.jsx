@@ -6,6 +6,8 @@ import Filter from '../components/Filter';
 import Slider from '../components/Slider';
 import ListItem from '../components/ListItem';
 
+import { Spinner } from '@chakra-ui/react';
+
 function List() {
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
@@ -24,7 +26,7 @@ function List() {
       const endIndex = startIndex + 16;
       setUsedData(data.slice(startIndex, endIndex));
     }
-  }, [data,page]);
+  }, [data, page]);
 
   useEffect(() => {
     dispatch(fetchData(page));
@@ -37,15 +39,26 @@ function List() {
         <div className={styles.filter}>
           <Filter data={data} filter={filterData} />
         </div>
-        {!data && <h1>Loading</h1>}
-        <div className={styles['product_grid_container']}>
-          {usedData &&
-            usedData.map((item) => <ListItem key={item.uui} item={item} />)}
-      <div id='pagination' className={styles.pagination}>
-        <button onClick={() => setPage((prev) => prev - 1)}>Prev Page</button>
-        <button onClick={() => setPage((prev) => prev + 1)}>Next Page</button>
-      </div>
-        </div>
+
+        {true && (
+          <div className={styles['product_grid_container']}>
+            {!data && (
+              <div className={styles.spinner}>
+                <Spinner as='div' size='xl' thickness='4px' color='pink.500' />
+              </div>
+            )}
+            {usedData &&
+              usedData.map((item) => <ListItem key={item.uui} item={item} />)}
+            <div id='pagination' className={styles.pagination}>
+              <button onClick={() => setPage((prev) => prev - 1)}>
+                Prev Page
+              </button>
+              <button onClick={() => setPage((prev) => prev + 1)}>
+                Next Page
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

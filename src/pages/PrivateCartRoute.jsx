@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { Outlet, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Cart from "./Cart";
 

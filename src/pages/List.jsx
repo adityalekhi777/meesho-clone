@@ -14,8 +14,6 @@ function List() {
   const data = useSelector((state) => state.products.data);
   const [usedData, setUsedData] = useState('');
 
-  console.log(usedData);
-
   function filterData(data) {
     setUsedData(data);
   }

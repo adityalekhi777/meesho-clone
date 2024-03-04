@@ -3,23 +3,24 @@
   display: flex;
   margin-top: 10px;
   width: 80%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .display {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 50%;
 }
-.details{
+.details {
   width: 50%;
 }
 .container img {
   padding: 20px;
   width: 80%;
   object-fit: contain;
-  
-
 }
 
 .container button {
@@ -27,14 +28,13 @@
   width: 80%;
   margin: 0 auto;
   border: none;
-  background-color:rgb(247, 119, 224);
+  background-color: rgb(247, 119, 224);
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
   color: white;
   font-weight: bold;
 }
-
 
 .details {
   width: 50%;
@@ -51,17 +51,16 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .container{
+  .container {
     display: block;
   }
 
   .display {
     width: 100%;
   }
-  .details{
+  .details {
     width: 100%;
   }
-
 }
 
 .size :last-child {

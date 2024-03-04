@@ -1,35 +1,27 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { fetchKeyWordData } from "../redux/products/productReducer";
 import cart from "../assets/svg/shopping_cart.svg";
 import SideBar from "./SideBar";
 import subMenu from "./MenuData";
+import SearchInput from "./SearchInput";
 
 export default function Navbar() {
   const [hover, setHover] = useState(true);
   const [category, setCategory] = useState([]);
-  const [showProfile, setShowProfile] = useState(false);
-  const [key, setKey] = useState("");
-  const dispatch = useDispatch();
+  // const [showProfile, setShowProfile] = useState(false);
 
   const user = useSelector((state) => state.auth.user);
   const totalQuantity = useSelector((state) => state.products.totalQuantity);
   console.log(user);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   function over(e) {
     setHover(true);
     let categoryName = e.target.id;
     setCategory(subMenu[categoryName]);
-  }
-
-  function search(e) {
-    e.preventDefault();
-    dispatch(fetchKeyWordData(key));
-    console.log(key);
   }
 
   return (
@@ -43,14 +35,7 @@ export default function Navbar() {
             <Link to="/">Meesho</Link>
           </li>
           <li className={styles.input}>
-            <form onSubmit={search} style={{ display: "inline" }}>
-              <input
-                type="text"
-                placeholder="search product here"
-                value={key}
-                onChange={(e) => setKey(e.target.value)}
-              ></input>
-            </form>
+            <SearchInput />
           </li>
           {user && <li>Hello {user.email}</li>}
           <li className={styles.cart}>
@@ -69,9 +54,7 @@ export default function Navbar() {
               <img src={cart} alt="cart" /> <span>Cart</span>
             </Link>
           </li>
-          <li>
-          
-          </li>
+          <li></li>
         </ul>
       </nav>
       <div className={styles.link}>

@@ -2,13 +2,13 @@
   --primary-color: rgb(247, 119, 224);
 }
 
-nav {
+.nav {
   border-bottom: solid rgb(195, 195, 195) 2px;
   position: relative;
   font-weight: 500;
 }
 
-nav ul {
+.nav ul {
   /* width: 95vw; */
   padding: 10px 20px;
   margin: 0 auto;
@@ -19,18 +19,18 @@ nav ul {
   gap: 30px;
 }
 
-nav ul li {
+.nav ul li {
   cursor: pointer;
 }
 
-nav ul li.logo {
+.nav ul li.logo {
   color: var(--primary-color);
   font-weight: 700;
   font-size: 20px;
   /* flex-grow: 1; */
 }
 
-nav ul li input {
+.nav ul li input {
   margin-left: 10px;
   border: solid rgb(195, 195, 195) 2px;
   border-radius: 10px;
@@ -44,7 +44,7 @@ nav ul li input {
   position: relative;
 }
 
-nav ul .input{
+.nav ul .input{
   margin-right: auto;
 }
 
@@ -161,32 +161,32 @@ input{
 }
 
 @media only screen and (max-width: 767px) {
-  nav ul {
+  .nav > ul {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
   }
 
-  nav ul .SideBar {
+  .nav ul .SideBar {
     grid-column: 1/2;
     align-self: center;
     justify-self: center;
   }
 
-  nav ul .logo {
+  .nav ul .logo {
     /* grid-column: 1/4; */
     grid-column: 2/3;
     align-self: center;
     justify-self: center;
   }
 
-  nav ul .cart {
+  .nav ul .cart {
     grid-column: 3/4;
     grid-row: 1/2;
   }
 
-  nav ul .input {
+  .nav ul .input {
     display: block;
     width: 100%;
     grid-row: 2/3;

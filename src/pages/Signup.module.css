@@ -1,6 +1,6 @@
 .container{
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
     width: 200px;
     justify-content: center;
 }
@@ -13,6 +13,8 @@
 }
 
 .container input{
+    border: 1px solid black;
+    border-radius: 5px;
     margin: 15px 0;
     height: 30px;
     padding: 5px;

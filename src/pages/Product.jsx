@@ -25,7 +25,7 @@ export default function Product() {
     getDoc(docRef).then((doc) => {
       setProduct({...doc.data(),uui:doc.id})
     });
-  }, []);
+  }, [id]);
 
   function add_cart(obj){
     dispatch(productActions.addItemToCart(obj))

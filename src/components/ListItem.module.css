@@ -18,7 +18,7 @@
   
   .product_grid_item .title {
     color: rgb(153, 153, 153);
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 0.85em;
     white-space: nowrap;
     text-overflow: ellipsis;

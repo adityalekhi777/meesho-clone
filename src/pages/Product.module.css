@@ -28,7 +28,7 @@
   width: 80%;
   margin: 0 auto;
   border: none;
-  background-color: rgb(247, 119, 224);
+  background-color: var(--primary-color);
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
